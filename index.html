@@ -4,217 +4,511 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tandon Jewellers – Since 1991</title>
-
 <style>
-    :root { --gold:#d4af37; --dark:#222; --light:#fff; --bg:#f3efe7; }
-
-    body { margin:0; font-family:"Segoe UI"; background:var(--bg); color:#333; }
-    header {
-        background:var(--gold); padding:18px; text-align:center;
-        color:white; font-size:24px; font-weight:bold;
-    }
-    .tagline { text-align:center; color:#444; margin:5px 0; font-size:15px; }
-
-    nav {
-        background:var(--dark); display:flex; justify-content:center;
-        gap:25px; padding:14px; flex-wrap:wrap;
-    }
-    nav a {
-        color:white; text-decoration:none; font-size:17px;
-        padding:8px 14px; border-radius:4px; transition:.3s;
-    }
-    nav a:hover { background:var(--gold); color:black; }
-
-    .section {
-        max-width:950px; padding:25px; margin:auto;
-        background:var(--light); margin-top:28px; border-radius:12px;
-        box-shadow:0 0 12px #ccc;
-    }
-    h2 { text-align:center; color:var(--dark); font-size:26px; margin-bottom:10px; }
-    p { font-size:18px; line-height:28px; }
-
-    details {
-        background:white; padding:18px; margin:15px 0;
-        border-radius:10px; box-shadow:0 0 10px #ccc;
-    }
-    summary { font-size:20px; color:var(--gold); font-weight:bold; cursor:pointer; }
-    ul { padding-left:18px; }
-    li { font-size:17px; margin:6px 0; }
-
-    input,textarea,button {
-        width:95%; padding:13px; margin:10px auto; display:block;
-        border-radius:8px; border:1px solid #bbb; font-size:17px;
-    }
-    button {
-        background:var(--gold); color:black; cursor:pointer;
-        font-weight:bold; border:none; transition:.3s;
-    }
-    button:hover { background:#b8952b; }
-
-    footer {
-        background:var(--dark); color:white; text-align:center;
-        padding:20px; font-size:14px; margin-top:30px;
-        line-height:22px;
-    }
+:root{
+    --gold:#d4af37;
+    --dark:#1c1c1c;
+    --light:#ffffff;
+    --bg:#f5f2eb;
+}
+body{
+    margin:0;
+    font-family:"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:#333;
+    scroll-behavior:smooth;
+}
+header{
+    background:var(--dark);
+    color:var(--gold);
+    padding:25px 10px;
+    text-align:center;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+.since{
+    text-align:center;
+    font-size:18px;
+    color:#555;
+    margin-top:-5px;
+    font-weight:500;
+}
+.tagline{
+    text-align:center;
+    color:#333;
+    font-size:15px;
+    margin:5px 0;
+}
+nav{
+    background:var(--gold);
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:14px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    font-size:17px;
+    padding:8px 14px;
+    border-radius:4px;
+    transition:0.3s;
+}
+nav a:hover{
+    background:black;
+    color:white;
+}
+.section{
+    max-width:1000px;
+    background:white;
+    padding:30px;
+    margin:30px auto;
+    border-radius:15px;
+    box-shadow:0 0 15px #ccc;
+}
+h2{
+    text-align:center;
+    color:var(--dark);
+    font-size:30px;
+    margin-bottom:15px;
+}
+p{
+    font-size:18px;
+    line-height:28px;
+}
+.hero{
+    text-align:center;
+    padding:40px 20px;
+    background:#222;
+    color:white;
+    border-radius:15px;
+}
+.hero h1{
+    font-size:36px;
+}
+.hero p{
+    font-size:20px;
+}
+details{
+    background:white;
+    padding:18px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+}
+summary{
+    font-size:20px;
+    color:var(--gold);
+    font-weight:bold;
+    cursor:pointer;
+}
+ul{
+    padding-left:20px;
+}
+li{
+    margin:6px 0;
+    font-size:17px;
+}
+input,textarea,button{
+    width:95%;
+    padding:13px;
+    margin:10px auto;
+    display:block;
+    border-radius:8px;
+    border:1px solid #bbb;
+    font-size:17px;
+}
+button{
+    background:var(--gold);
+    color:black;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:hover{
+    background:#b48f2b;
+}
+footer{
+    text-align:center;
+    background:var(--dark);
+    color:white;
+    padding:25px;
+    font-size:15px;
+}
 </style>
 </head>
-
 <body>
 
-<header> TANDON JEWELLERS • Since 1991 </header>
+<header>TANDON JEWELLERS</header>
+<p class="since">Serving You Since 1991</p>
 <p class="tagline">Babeja Market, Gudari Bazar, Samastipur, Bihar 📍</p>
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#products">Products</a>
-  <a href="#login">Login</a>
+  <a href="#about">About</a>
+  <a href="#gold">Gold Jewellery</a>
+  <a href="#silver">Silver Jewellery</a>
+  <a href="#gemstone">Gemstone Jewellery</a>
+  <a href="#spiritual">Spiritual Products</a>
+  <a href="#custom">Custom Jewellery</a>
+  <a href="#quality">Quality Assurance</a>
+  <a href="#blogs">Educational</a>
   <a href="#order">Order</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
+<div id="home" class="section hero">
+<h1>Gold, Silver,Premium Stone, Diamond & Rudraksha Jewellery</h1>
+<p>Nature’s elegance, crafted with devotion and luxury.</p>
+<p style="margin-top:15px;">Explore certified diamonds, gemstones, and authentic Rudraksha jewellery designed for beauty, balance, and positivity.</p>
+</div>
 
-<!-- HOME SECTION -->
-<div id="home" class="section">
-<h2>✨ Tandon Jewellers — A Legacy of Purity & Trust</h2>
+<!-- ABOUT -->
+<div id="about" class="section">
+<h2>About Us</h2>
+<p>We specialize in high-quality gemstone, diamond, and Rudraksha jewellery crafted by expert artisans. All products are certified for authenticity and purity.</p>
+<p>Our designs blend traditional craftsmanship with modern elegance, perfect for daily wear and special occasions.</p>
+</div>
 
-<p>
-Welcome to Tandon Jewellers — the most trusted and premium jewellery showroom in Samastipur.  
-We are known for <b>pure hallmarked gold</b>, <b>exceptional craftsmanship</b>, and a perfect blend of <b>modern & traditional designs</b>.
-</p>
+<!-- GOLD -->
+<div id="gold" class="section">
+<h2>Gold Jewellery Products</h2>
 
-<p><b>
-🛡 100% Hallmarked Gold<br>
-💎 Certified Diamonds & Precious Gemstones<br>
-⚒️ Custom Jewellery Crafting<br>
-🎁 Affordable to Premium Collections<br>
-📍 Proudly serving Samastipur & nearby regions
-</b></p>
-
-<h3 style="color:var(--gold);text-align:center;">⭐ Our Commitment</h3>
+<details>
+<summary>A. Gold Rings</summary>
 <ul>
-<li>Superior Purity</li>
-<li>Elegant Craftsmanship</li>
-<li>Fair & Transparent Pricing</li>
-<li>Lifetime Trust & Support</li>
+<li>Plain Gold Rings</li>
+<li>Bridal Rings</li>
+<li>Engagement Rings</li>
+<li>Temple Rings</li>
+<li>Adjustable Rings</li>
+<li>Cocktail Rings</li>
+<li>Couple Bands</li>
+<li>Gold Signet Rings (Men)</li>
+<li>Kundan Gold Rings</li>
+<li>Antique Gold Rings</li>
 </ul>
+</details>
 
-<h3 style="color:var(--gold);text-align:center;">🎀 Our Jewellery Collections</h3>
-<p><b>Gold Jewellery:</b><br>
-Necklaces • Mangalsutras • Rings • Bangles • Bracelets • Earrings • Chains</p>
-
-<p><b>Diamond Jewellery:</b><br>
-Engagement Rings • Bridal Sets • Pendants • Nose Pins</p>
-
-<p><b>Gemstone Jewellery:</b><br>
-Ruby • Sapphire • Emerald • Pearl • Coral • Certified Birthstones</p>
-
-<p><b>Silver Jewellery:</b><br>
-Anklets • Toe Rings • Bracelets • Chains • Coins • Pooja Articles</p>
-
-<p><b>Bridal & Custom Jewellery:</b><br>
-Kundan • Antique • Temple Jewellery • Complete Bridal Sets</p>
-
-<h3 style="color:var(--gold);text-align:center;">❤️ Why Customers Choose Us</h3>
+<details>
+<summary>B. Gold Earrings</summary>
 <ul>
-<li>Wide collection — From traditional classics to latest trends</li>
-<li>Personalized shopping experience with jewellery experts</li>
-<li>Complete transparency with certification</li>
-<li>After-sale services including cleaning & polishing</li>
-<li>Best value for every budget</li>
+<li>Stud Earrings</li>
+<li>Hoop Earrings</li>
+<li>Jhumka Earrings</li>
+<li>Chandbali</li>
+<li>Drop Earrings</li>
+<li>Ear Cuffs</li>
+<li>Bali Earrings</li>
+<li>Lightweight Dailywear Earrings</li>
 </ul>
+</details>
 
-<p style="text-align:center;font-size:19px;color:#555;">
-✨ “Jewellery that reflects your elegance.” ✨
-</p>
+<details>
+<summary>C. Gold Neck Jewellery</summary>
+<ul>
+<li>Gold Necklaces</li>
+<li>Choker Necklaces</li>
+<li>Long Haar</li>
+<li>Mangalsutras</li>
+<li>Minimal Layered Necklaces</li>
+<li>Bridal Necklace Sets</li>
+<li>Temple Jewellery Sets</li>
+</ul>
+</details>
 
-<h3 style="color:var(--gold);text-align:center;">📍 Visit Our Store</h3>
-<p>
-Tandon Jewellers<br>
-Babeja Market, Gudari Bazar, Samastipur – Bihar<br>
-📞 Mobile: <b>9798804937</b><br>
-🕙 Timings: 10:00 AM – 9:00 PM (Open All Days)
-</p>
+<details>
+<summary>D. Gold Bracelets & Bangles</summary>
+<ul>
+<li>Plain Bangles</li>
+<li>Antique Bangles</li>
+<li>Gold Kada (Men/Women)</li>
+<li>Modern Bracelets</li>
+<li>Dailywear Gold Bangles</li>
+<li>Broad Bridal Bangles</li>
+<li>Lightweight Slim Bangles</li>
+</ul>
+</details>
+
+<details>
+<summary>E. Gold Chains</summary>
+<ul>
+<li>Gold Cable Chain</li>
+<li>Rope Chain</li>
+<li>Figaro Chain</li>
+<li>Box Chain</li>
+<li>Singapore Chain</li>
+<li>Fancy Designer Chains</li>
+</ul>
+</details>
+
+<details>
+<summary>F. Gold Pendants</summary>
+<ul>
+<li>Religious Pendants</li>
+<li>Alphabet Pendants</li>
+<li>Heart Pendants</li>
+<li>Custom Photo Pendants</li>
+<li>Minimalist Pendants</li>
+<li>Zodiac Pendants</li>
+</ul>
+</details>
+
+<details>
+<summary>G. Gold Accessories</summary>
+<ul>
+<li>Gold Nose Pins</li>
+<li>Gold Waist Belt (Kamarband)</li>
+<li>Gold Anklets</li>
+<li>Gold Maang Tikka</li>
+<li>Gold Brooch</li>
+<li>Gold Toe Rings</li>
+</ul>
+</details>
 </div>
 
-
-<!-- PRODUCT SECTION -->
-<div id="products" class="section">
-<h2>Our Jewellery Categories 📦</h2>
+<!-- SILVER -->
+<div id="silver" class="section">
+<h2>Silver Jewellery Products</h2>
 
 <details>
-    <summary>🟡 Gold Jewellery</summary>
-    <ul>
-        <li>Necklaces (Choker • Rani Haar • Long Haar)</li>
-        <li>Mangalsutras • Earrings • Rings • Bangles • Bracelets</li>
-        <li>Chains • Pendants • Bridal Sets</li>
-        <li>Baby Jewellery • Gold Coins</li>
-    </ul>
+<summary>A. Silver Rings</summary>
+<ul>
+<li>Sterling Silver Rings</li>
+<li>Oxidized Silver Rings</li>
+<li>Adjustable Rings</li>
+<li>Couple Rings</li>
+<li>Silver Birthstone Rings</li>
+</ul>
 </details>
 
 <details>
-    <summary>⚪ Silver Jewellery</summary>
-    <ul>
-        <li>Anklets • Toe Rings • Rings • Bracelets</li>
-        <li>Chains • Pendants • Religious Articles</li>
-    </ul>
+<summary>B. Silver Earrings</summary>
+<ul>
+<li>Oxidised Jhumka</li>
+<li>Stud Earrings</li>
+<li>Hoop Earrings</li>
+<li>Tribal Earrings</li>
+<li>Long Dangler Earrings</li>
+</ul>
 </details>
 
 <details>
-    <summary>🟣 Artificial Jewellery</summary>
-    <ul>
-        <li>Oxidized • Kundan • Meenakari • Temple Designs</li>
-        <li>Bangles • Earrings • Bridal Sets</li>
-    </ul>
+<summary>C. Silver Neck Jewellery</summary>
+<ul>
+<li>Silver Chain</li>
+<li>Silver Necklaces</li>
+<li>Oxidized Silver Sets</li>
+<li>Silver Pendant Sets</li>
+<li>Temple Silver Necklace</li>
+</ul>
 </details>
 
 <details>
-    <summary>💎 Gemstone Jewellery</summary>
-    <ul>
-        <li>Ruby • Sapphire • Emerald • Coral • Pearl</li>
-    </ul>
+<summary>D. Silver Bracelets & Bangles</summary>
+<ul>
+<li>Dailywear Silver Bracelets</li>
+<li>Oxidised Kada</li>
+<li>Tribal Bangles</li>
+<li>Charm Bracelets</li>
+<li>Silver Cuff Bracelets</li>
+</ul>
 </details>
 
+<details>
+<summary>E. Silver Anklets</summary>
+<ul>
+<li>Traditional Payal</li>
+<li>Lightweight Anklets</li>
+<li>Silver Ghungroo Anklets</li>
+<li>Minimal Anklets</li>
+<li>Bridal Payal Set</li>
+</ul>
+</details>
+
+<details>
+<summary>F. Silver Accessories</summary>
+<ul>
+<li>Silver Toe Rings</li>
+<li>Silver Nose Pins</li>
+<li>Silver Keychains</li>
+<li>Silver Rakhi</li>
+<li>Silver Coins & Bars</li>
+</ul>
+</details>
+
+<details>
+<summary>G. Kids Silver Jewellery</summary>
+<ul>
+<li>Kids Bangles</li>
+<li>Kids Kada</li>
+<li>Kids Chains</li>
+<li>Kids Anklets</li>
+<li>Kids Pendants</li>
+</ul>
+</details>
 </div>
 
+<!-- GEMSTONE -->
+<div id="gemstone" class="section">
+<h2>Gemstone Jewellery Products</h2>
 
-<!-- LOGIN SECTION -->
-<div id="login" class="section">
-<h2>Customer Login</h2>
-<input type="text" id="logname" placeholder="Enter Name">
-<input type="password" id="logpwd" placeholder="Enter Password">
-<button onclick="loginUser()">Login</button>
-<p id="loginmsg" style="text-align:center;"></p>
+<details>
+<summary>A. Birthstones (All Gems)</summary>
+<ul>
+<li>Ruby</li>
+<li>Emerald</li>
+<li>Sapphire</li>
+<li>Yellow Topaz</li>
+<li>Blue Topaz</li>
+<li>Pearl</li>
+<li>Garnet</li>
+<li>Turquoise</li>
+<li>Amethyst</li>
+<li>Peridot</li>
+<li>Opal</li>
+<li>Cat’s Eye</li>
+</ul>
+</details>
+
+<details>
+<summary>B. Gemstone Rings</summary>
+<ul>
+<li>Pure Gemstone Rings</li>
+<li>Astrological Rings</li>
+<li>Silver Gemstone Rings</li>
+<li>Gold Gemstone Rings</li>
+<li>Panchdhatu Rings</li>
+<li>Adjustable Gemstone Rings</li>
+</ul>
+</details>
+
+<details>
+<summary>C. Gemstone Pendants</summary>
+<ul>
+<li>Crystal Pendants</li>
+<li>Pendant with Metal Cap</li>
+<li>Energy Pendants</li>
+<li>Healing Stone Pendants</li>
+<li>Zodiac Pendant</li>
+<li>Birthstone Pendant</li>
+</ul>
+</details>
+
+<details>
+<summary>D. Gemstone Bracelets</summary>
+<ul>
+<li>Natural Stone Bracelet</li>
+<li>Chakra Healing Bracelets</li>
+<li>Crystal Chip Bracelets</li>
+<li>Evil Eye Bracelets</li>
+<li>Energy Protection Bracelets</li>
+<li>Custom Pattern Bracelets</li>
+</ul>
+</details>
+
+<details>
+<summary>E. Gemstone Mala & Chains</summary>
+<ul>
+<li>Rudraksha + Gemstone Mala</li>
+<li>Tiger Eye Mala</li>
+<li>Rose Quartz Mala</li>
+<li>Seven Chakra Mala</li>
+<li>Amethyst Mala</li>
+<li>Jade Mala</li>
+</ul>
+</details>
+
+<details>
+<summary>F. Gemstone Necklaces</summary>
+<ul>
+<li>Precious Stone Necklaces</li>
+<li>Semi-precious Stone Sets</li>
+<li>Crystal Statement Necklaces</li>
+</ul>
+</details>
 </div>
 
+<!-- SPIRITUAL -->
+<div id="spiritual" class="section">
+<h2>Spiritual & Add-on Products</h2>
+<ul>
+<li>Rudraksha (1 Mukhi to 14 Mukhi)</li>
+<li>Rudraksha Bracelets & Malas</li>
+<li>Gold/Silver Capped Rudraksha</li>
+<li>Rudraksha + Stone Combination</li>
+<li>Spiritual & Energy Items</li>
+<li>Evil Eye Products</li>
+<li>Healing Crystals & Tumbled Stones</li>
+<li>Feng Shui Items</li>
+<li>Pyramid Energy Tools</li>
+</ul>
+</div>
 
-<!-- ORDER SECTION -->
+<!-- CUSTOM JEWELLERY -->
+<div id="custom" class="section">
+<h2>Custom Jewellery Designing</h2>
+<ul>
+<li>Custom Rings</li>
+<li>Custom Name Pendants</li>
+<li>Custom Birthstone Bracelets</li>
+<li>Wedding & Engagement Custom Sets</li>
+<li>Corporate Gift Designs</li>
+</ul>
+<p>Your idea → Our craftsmanship → Your perfect jewellery!</p>
+</div>
+
+<!-- QUALITY ASSURANCE -->
+<div id="quality" class="section">
+<h2>Quality Assurance & Manufacturing Process</h2>
+<ul>
+<li>Gold Hallmark Details</li>
+<li>Silver Certification</li>
+<li>Gemstone Lab Reports</li>
+<li>Diamond Certification (IGI/GIA)</li>
+<li>7-Point Purity Check</li>
+<li>Handcrafted Techniques</li>
+<li>Stone Selection</li>
+<li>Polishing & Finishing</li>
+<li>Customization Steps</li>
+<li>Quality Inspection</li>
+</ul>
+</div>
+
+<!-- EDUCATIONAL BLOGS -->
+<div id="blogs" class="section">
+<h2>Educational Blogs</h2>
+<ul>
+<li>How to identify real gemstones</li>
+<li>Gold guide</li>
+<li>Choosing the right jewellery for occasions</li>
+<li>Benefits of healing crystals</li>
+<li>Rudraksha types & meanings</li>
+</ul>
+</div>
+
+<!-- ORDER -->
 <div id="order" class="section">
-<h2>Order Enquiry 📲</h2>
+<h2>Order Enquiry</h2>
 <input type="text" id="oname" placeholder="Enter Name">
 <input type="number" id="omobile" placeholder="Enter Mobile Number">
 <textarea id="omsg" placeholder="Which Jewellery Item?"></textarea>
 <button onclick="sendOrder()">Send Order on WhatsApp</button>
 </div>
 
-
 <!-- FOOTER -->
 <footer id="contact">
 📍 Babeja Market, Gudari Bazar, Samastipur - Bihar<br>
 📞 Mobile: <b>9798804937</b><br>
-🕙 Timings: 10:00 AM – 9:00 PM (Open All Days)<br>
+🕙 Timings: 10 AM – 9 PM ( <b>Tuesday Closed</b> )<br>
 © 2025 Tandon Jewellers — Since 1991
 </footer>
 
-
 <script>
-function loginUser(){
-    let u=logname.value, p=logpwd.value;
-    loginmsg.style.color = (u && p) ? "green" : "red";
-    loginmsg.innerHTML = (u && p)
-        ? "✔ Login Successful"
-        : "✖ Please enter name and password";
-}
-
 function sendOrder(){
     let n=oname.value, m=omobile.value, msg=omsg.value;
     if(!n || !m){
@@ -224,6 +518,5 @@ function sendOrder(){
     window.open(`https://wa.me/919798804937?text=Hello,%20I%20am%20${n},%20Mobile:%20${m}.%20I%20am%20interested%20in:%20${msg}`);
 }
 </script>
-
 </body>
 </html>
