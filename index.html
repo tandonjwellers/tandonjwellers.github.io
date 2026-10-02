@@ -750,129 +750,93 @@ button{
 
 }
 
-
-<style>
-/* =====================================================
-   PREMIUM GEMSTONE GALLERY
-===================================================== */
-
 .gemstone-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-    margin-top:50px;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:13px;
+
 }
 
 .gemstone-card{
-    position:relative;
+
+    background:#141310;
+
+    border:1px solid rgba(201,163,91,.15);
+
     overflow:hidden;
-    background:#0c0c0c;
-    border:1px solid rgba(201,163,91,.20);
-    transition:all .45s ease;
+
+    transition:.4s;
+
 }
 
 .gemstone-card:hover{
+
     transform:translateY(-8px);
-    border-color:rgba(201,163,91,.65);
-    box-shadow:0 18px 45px rgba(0,0,0,.45);
+
+    border-color:rgba(201,163,91,.6);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.4);
+
 }
 
-.gemstone-image{
-    position:relative;
-    height:280px;
+.gemstone-img{
+
+    height:220px;
+
     overflow:hidden;
-    background:#111;
+
 }
 
-.gemstone-image img{
-    width:100%;
+.gemstone-img img{
+
     height:100%;
-    display:block;
+
     object-fit:cover;
-    transition:transform .7s ease;
+
+    transition:.6s;
+
 }
 
-.gemstone-card:hover .gemstone-image img{
+.gemstone-card:hover img{
+
     transform:scale(1.08);
+
 }
 
-.gemstone-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.78),
-        rgba(0,0,0,.05) 65%
-    );
+.gemstone-info{
+
+    padding:17px;
+
+    text-align:center;
+
 }
 
-.gemstone-content{
-    padding:22px 20px 24px;
+.gemstone-info h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
 }
 
-.gemstone-label{
-    font-size:9px;
-    letter-spacing:2px;
-    color:#c9a35b;
-    margin-bottom:8px;
-    text-transform:uppercase;
+.gemstone-info p{
+
+    color:#888;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    margin-top:5px;
+
 }
 
-.gemstone-name{
-    font-family:Georgia,serif;
-    font-size:24px;
-    color:#fff;
-    margin-bottom:5px;
-}
-
-.gemstone-hindi{
-    color:#c9a35b;
-    font-size:13px;
-    margin-bottom:16px;
-}
-
-.gemstone-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:10px 16px;
-    border:1px solid rgba(201,163,91,.5);
-    color:#e8d4a5;
-    text-decoration:none;
-    font-size:10px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    transition:.3s ease;
-}
-
-.gemstone-btn:hover{
-    background:#c9a35b;
-    color:#080808;
-}
-
-/* Tablet */
-@media(max-width:1000px){
-    .gemstone-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-/* Mobile */
-@media(max-width:600px){
-    .gemstone-grid{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .gemstone-image{
-        height:300px;
-    }
-
-    .gemstone-name{
-        font-size:22px;
-    }
-}
-</style>
 
 /* =====================================================
    COLLECTION FEATURE
