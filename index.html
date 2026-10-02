@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,6 @@
 
 <meta name="description"
 content="Tandon Jewellers - Gold, Silver, Diamond, Gemstone and Rudraksha Jewellery. Serving Samastipur since 1991.">
-
-<meta name="keywords"
-content="Tandon Jewellers, Samastipur Jewellers, Gold Jewellery Samastipur, Diamond Jewellery, Gemstone, Rudraksha">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -24,9 +22,9 @@ rel="stylesheet">
 
 <style>
 
-/* ==============================
+/* =========================
    GLOBAL
-============================== */
+========================= */
 
 *{
     margin:0;
@@ -56,11 +54,11 @@ img{
 
 :root{
     --gold:#c6a15b;
-    --gold2:#e2c98e;
-    --black:#111;
+    --gold-light:#e3cc98;
+    --black:#111111;
     --cream:#faf8f3;
-    --white:#fff;
-    --gray:#777;
+    --white:#ffffff;
+    --gray:#777777;
 }
 
 .container{
@@ -69,25 +67,25 @@ img{
     padding:0 30px;
 }
 
-/* ==============================
+/* =========================
    TOP BAR
-============================== */
+========================= */
 
 .topbar{
     background:#111;
     color:white;
     text-align:center;
-    padding:9px;
-    font-size:11px;
+    padding:10px;
+    font-size:10px;
     letter-spacing:2px;
 }
 
-/* ==============================
+/* =========================
    HEADER
-============================== */
+========================= */
 
 header{
-    background:#fff;
+    background:white;
     position:sticky;
     top:0;
     z-index:999;
@@ -95,19 +93,20 @@ header{
 }
 
 .header-main{
+    max-width:1400px;
     height:88px;
+    margin:auto;
+    padding:0 30px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    max-width:1400px;
-    margin:auto;
-    padding:0 30px;
 }
 
 .logo{
     text-align:center;
     font-family:'Cormorant Garamond',serif;
-    font-size:34px;
+    font-size:35px;
     letter-spacing:6px;
     line-height:.8;
 }
@@ -128,10 +127,10 @@ header{
 }
 
 .search input{
+    width:100%;
     border:0;
     outline:0;
     padding:10px;
-    width:100%;
     font-family:inherit;
 }
 
@@ -144,9 +143,12 @@ header{
 
 .header-right{
     display:flex;
-    gap:22px;
+    gap:18px;
     align-items:center;
-    font-size:19px;
+}
+
+.header-right a{
+    font-size:18px;
 }
 
 .header-right a:hover{
@@ -159,9 +161,9 @@ header{
     cursor:pointer;
 }
 
-/* ==============================
-   NAV
-============================== */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     border-top:1px solid #eee;
@@ -172,43 +174,34 @@ nav{
 }
 
 nav a{
-    font-size:11px;
+    font-size:10px;
     letter-spacing:1.5px;
     position:relative;
-}
-
-nav a:after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-7px;
-    width:0;
-    height:1px;
-    background:var(--gold);
-    transition:.3s;
 }
 
 nav a:hover{
     color:var(--gold);
 }
 
-nav a:hover:after{
-    width:100%;
-}
-
-/* ==============================
+/* =========================
    HERO
-============================== */
+========================= */
 
 .hero{
+
     min-height:680px;
+
     display:flex;
     align-items:center;
+
     background:
-    linear-gradient(90deg,
-    rgba(0,0,0,.72),
-    rgba(0,0,0,.25)),
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.20)
+    ),
     url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=85");
+
     background-size:cover;
     background-position:center;
 }
@@ -222,7 +215,7 @@ nav a:hover:after{
 }
 
 .hero-small{
-    color:#e1c888;
+    color:var(--gold-light);
     letter-spacing:4px;
     font-size:11px;
     margin-bottom:20px;
@@ -251,10 +244,10 @@ nav a:hover:after{
 }
 
 .btn{
-    padding:15px 28px;
-    font-size:11px;
-    letter-spacing:1.5px;
     display:inline-block;
+    padding:15px 28px;
+    font-size:10px;
+    letter-spacing:1.5px;
     transition:.3s;
 }
 
@@ -264,7 +257,7 @@ nav a:hover:after{
 }
 
 .btn-gold:hover{
-    background:#a98440;
+    background:#a88440;
 }
 
 .btn-outline{
@@ -277,9 +270,9 @@ nav a:hover:after{
     color:#111;
 }
 
-/* ==============================
+/* =========================
    SECTION
-============================== */
+========================= */
 
 section{
     padding:90px 0;
@@ -298,22 +291,22 @@ section{
 
 .section-title h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:50px;
+    font-size:52px;
     font-weight:500;
     margin-top:10px;
 }
 
 .section-title p{
-    color:#777;
-    max-width:600px;
+    max-width:620px;
     margin:12px auto;
+    color:#777;
     font-size:13px;
     line-height:1.8;
 }
 
-/* ==============================
-   CATEGORY
-============================== */
+/* =========================
+   CATEGORIES
+========================= */
 
 .category-grid{
     display:grid;
@@ -340,14 +333,19 @@ section{
 .category-overlay{
     position:absolute;
     inset:0;
+
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
+
     padding:28px;
+
     color:white;
-    background:linear-gradient(
-        transparent 45%,
-        rgba(0,0,0,.85)
+
+    background:
+    linear-gradient(
+        transparent 40%,
+        rgba(0,0,0,.9)
     );
 }
 
@@ -358,13 +356,12 @@ section{
 
 .category span{
     font-size:10px;
-    letter-spacing:1px;
     margin-top:6px;
 }
 
-/* ==============================
+/* =========================
    GOLD RATE
-============================== */
+========================= */
 
 .gold-rate{
     background:#151515;
@@ -372,16 +369,18 @@ section{
 }
 
 .gold-rate-inner{
+
     max-width:1200px;
     margin:auto;
     padding:50px 30px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .gold-rate small{
-    color:var(--gold2);
+    color:var(--gold-light);
     letter-spacing:3px;
 }
 
@@ -396,9 +395,9 @@ section{
     font-size:11px;
 }
 
-/* ==============================
-   FEATURED
-============================== */
+/* =========================
+   FEATURED PRODUCTS
+========================= */
 
 .products{
     display:grid;
@@ -431,8 +430,11 @@ section{
     position:absolute;
     left:12px;
     top:12px;
+    z-index:2;
+
     background:#111;
     color:white;
+
     font-size:9px;
     padding:7px 10px;
 }
@@ -457,8 +459,10 @@ section{
     border:1px solid #ddd;
     background:white;
     padding:11px;
+
     cursor:pointer;
-    font-size:10px;
+
+    font-size:9px;
     letter-spacing:1px;
 }
 
@@ -467,21 +471,28 @@ section{
     color:white;
 }
 
-/* ==============================
+/* =========================
    WEDDING
-============================== */
+========================= */
 
 .wedding{
+
     min-height:600px;
+
     display:flex;
     align-items:center;
+
     background:
-    linear-gradient(90deg,
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.15)),
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.15)
+    ),
     url("https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=2000&q=85");
+
     background-size:cover;
     background-position:center;
+
     color:white;
 }
 
@@ -491,7 +502,7 @@ section{
 }
 
 .wedding-content small{
-    color:#e1c888;
+    color:var(--gold-light);
     letter-spacing:4px;
 }
 
@@ -507,45 +518,70 @@ section{
     color:#eee;
 }
 
-/* ==============================
+/* =========================
    GEMSTONES
-============================== */
+========================= */
 
 .gemstone-grid{
+
     display:grid;
-    grid-template-columns:repeat(6,1fr);
+
+    grid-template-columns:
+    repeat(6,1fr);
+
     gap:15px;
 }
 
 .gemstone{
+
     background:white;
+
     text-align:center;
+
     padding-bottom:18px;
+
+    overflow:hidden;
 }
 
 .gemstone img{
-    height:180px;
+
+    height:190px;
+
     object-fit:cover;
+
+    transition:.5s;
+}
+
+.gemstone:hover img{
+    transform:scale(1.08);
 }
 
 .gemstone h3{
+
     font-family:'Cormorant Garamond',serif;
-    font-size:20px;
-    margin-top:10px;
+
+    font-size:21px;
+
+    margin-top:12px;
 }
 
-/* ==============================
-   PROMISE
-============================== */
+/* =========================
+   SPIRITUAL
+========================= */
 
 .promise{
     background:#eee8dc;
 }
 
 .promise-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:30px;
+
     text-align:center;
 }
 
@@ -555,247 +591,394 @@ section{
 }
 
 .promise h3{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:26px;
+
     margin:15px 0 8px;
 }
 
 .promise p{
+
     color:#777;
+
     font-size:12px;
+
     line-height:1.7;
 }
 
-/* ==============================
-   CUSTOM
-============================== */
+/* =========================
+   QUALITY
+========================= */
+
+.quality-box{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.quality-card{
+
+    background:white;
+
+    padding:35px 20px;
+
+    text-align:center;
+}
+
+.quality-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:25px;
+
+    margin:12px 0;
+}
+
+.quality-card p{
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+/* =========================
+   CUSTOM JEWELLERY
+========================= */
 
 .custom{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     background:white;
 }
 
 .custom-img{
+
     min-height:550px;
+
     background:
     url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1500&q=85")
     center/cover;
 }
 
 .custom-content{
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     padding:70px;
 }
 
 .custom-content small{
+
     color:var(--gold);
+
     letter-spacing:3px;
 }
 
 .custom-content h2{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:60px;
+
     line-height:1;
+
     margin:20px 0;
 }
 
 .custom-content p{
+
     color:#777;
+
     line-height:1.8;
+
     max-width:500px;
 }
 
-/* ==============================
-   STORE
-============================== */
+/* =========================
+   SHOWROOM
+========================= */
 
 .store{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
 }
 
 .store-image{
+
     min-height:500px;
+
     background:
     url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1500&q=85")
     center/cover;
 }
 
 .store-content{
+
     background:#111;
+
     color:white;
+
     padding:70px;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
 }
 
 .store-content small{
+
     color:var(--gold);
+
     letter-spacing:3px;
 }
 
 .store-content h2{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:58px;
+
     margin:18px 0;
 }
 
 .store-content p{
+
     color:#bbb;
+
     line-height:1.8;
+
     font-size:13px;
+
+    margin:5px 0;
 }
 
-.store-info{
-    margin:20px 0;
-}
-
-/* ==============================
+/* =========================
    BLOG
-============================== */
+========================= */
 
 .blog-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
 }
 
 .blog{
+
     background:white;
 }
 
 .blog img{
+
     height:250px;
+
     object-fit:cover;
 }
 
 .blog-content{
+
     padding:25px;
 }
 
 .blog-content small{
+
     color:var(--gold);
 }
 
 .blog-content h3{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:26px;
+
     margin:10px 0;
 }
 
 .blog-content p{
+
     color:#777;
+
     font-size:12px;
+
     line-height:1.7;
 }
 
-/* ==============================
-   WHATSAPP CTA
-============================== */
+/* =========================
+   CTA
+========================= */
 
 .cta{
+
     background:#d8c293;
+
     text-align:center;
+
     padding:80px 30px;
 }
 
 .cta h2{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:50px;
 }
 
 .cta p{
+
     margin:12px 0 25px;
 }
 
-/* ==============================
+/* =========================
    FOOTER
-============================== */
+========================= */
 
 footer{
+
     background:#111;
+
     color:white;
 }
 
 .footer-grid{
+
     max-width:1400px;
+
     margin:auto;
+
     padding:70px 30px;
+
     display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1.5fr;
+
     gap:50px;
 }
 
 .footer-logo{
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:32px;
+
     letter-spacing:5px;
 }
 
 .footer-logo span{
+
     display:block;
-    font-family:'Montserrat',sans-serif;
+
     color:var(--gold);
+
+    font-family:'Montserrat',sans-serif;
+
     font-size:8px;
+
     letter-spacing:4px;
 }
 
-.footer-grid p{
-    color:#aaa;
-    line-height:1.8;
-    font-size:12px;
-    margin-top:15px;
-}
-
 .footer-grid h3{
+
     color:var(--gold);
+
     margin-bottom:18px;
+
     font-size:13px;
 }
 
-.footer-grid a{
-    display:block;
+.footer-grid p{
+
     color:#aaa;
+
+    line-height:1.8;
+
     font-size:12px;
+
+    margin-top:12px;
+}
+
+.footer-grid a{
+
+    display:block;
+
+    color:#aaa;
+
+    font-size:12px;
+
     margin:10px 0;
 }
 
 .footer-grid a:hover{
+
     color:white;
 }
 
 .copyright{
+
     border-top:1px solid #333;
+
     text-align:center;
+
     padding:20px;
+
     color:#777;
+
     font-size:10px;
 }
 
-/* ==============================
-   FLOATING WHATSAPP
-============================== */
+/* =========================
+   WHATSAPP
+========================= */
 
 .whatsapp{
+
     position:fixed;
+
     right:22px;
+
     bottom:22px;
+
     z-index:1000;
+
     background:#25D366;
+
     color:white;
+
     padding:14px 20px;
+
     border-radius:30px;
+
     font-size:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.2);
 }
 
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+========================= */
 
 @media(max-width:900px){
 
@@ -808,8 +991,11 @@ footer{
     }
 
     nav{
+
         display:none;
+
         flex-direction:column;
+
         text-align:center;
     }
 
@@ -842,7 +1028,8 @@ footer{
         grid-template-columns:repeat(3,1fr);
     }
 
-    .promise-grid{
+    .promise-grid,
+    .quality-box{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -863,7 +1050,6 @@ footer{
     .footer-grid{
         grid-template-columns:1fr 1fr;
     }
-
 }
 
 @media(max-width:500px){
@@ -895,7 +1081,8 @@ footer{
 
     .category-grid,
     .products,
-    .promise-grid{
+    .promise-grid,
+    .quality-box{
         grid-template-columns:1fr;
     }
 
@@ -904,8 +1091,11 @@ footer{
     }
 
     .gold-rate-inner{
+
         flex-direction:column;
+
         text-align:center;
+
         gap:25px;
     }
 
@@ -926,56 +1116,102 @@ footer{
     .footer-grid{
         grid-template-columns:1fr;
     }
-
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
 
-<!-- TOP BAR -->
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="topbar">
-    ✦ SERVING YOU SINCE 1991 ✦ &nbsp; | &nbsp;
-    BABEJA MARKET, GUDARI BAZAR, SAMASTIPUR
+
+    ✦ TANDON JEWELLERS — SERVING YOU SINCE 1991 ✦
+
+    &nbsp; | &nbsp;
+
+    11 AM – 7 PM
+
+    &nbsp; | &nbsp;
+
+    TUESDAY CLOSED
+
 </div>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="header-main">
 
-    <div class="menu" onclick="toggleMenu()">☰</div>
+    <div class="menu"
+         onclick="toggleMenu()">
+        ☰
+    </div>
 
-    <a href="#home" class="logo">
+
+    <a href="#home"
+       class="logo">
+
         TANDON
-        <span>JEWELLERS</span>
+
+        <span>
+            JEWELLERS
+        </span>
+
     </a>
+
 
     <div class="search">
 
         <input
-        type="text"
-        id="searchInput"
-        placeholder="Search jewellery...">
+            type="text"
+            id="searchInput"
+            placeholder="Search jewellery..."
+        >
 
-        <button onclick="searchJewellery()">⌕</button>
+        <button
+            onclick="searchJewellery()">
+
+            ⌕
+
+        </button>
 
     </div>
 
+
     <div class="header-right">
 
-        <a href="tel:+919798804937">☎</a>
+        <a href="tel:+919798804937"
+           title="Call 9798804937">
 
-        <a href="#contact">♡</a>
+            ☎
 
-        <a href="https://wa.me/919798804937"
-           target="_blank">☘</a>
+        </a>
+
+        <a href="tel:+916204601253"
+           title="Call 6204601253">
+
+            ☎
+
+        </a>
+
+        <a
+          href="https://wa.me/919798804937"
+          target="_blank"
+          title="WhatsApp">
+
+            💬
+
+        </a>
 
     </div>
 
@@ -984,60 +1220,101 @@ footer{
 
 <nav id="nav">
 
-    <a href="#home">HOME</a>
+    <a href="#home">
+        HOME
+    </a>
 
-    <a href="#categories">GOLD</a>
+    <a href="#categories">
+        GOLD
+    </a>
 
-    <a href="#categories">SILVER</a>
+    <a href="#categories">
+        SILVER
+    </a>
 
-    <a href="#gemstones">GEMSTONES</a>
+    <a href="#gemstones">
+        GEMSTONES
+    </a>
 
-    <a href="#wedding">WEDDING</a>
+    <a href="#wedding">
+        WEDDING
+    </a>
 
-    <a href="#spiritual">SPIRITUAL</a>
+    <a href="#spiritual">
+        SPIRITUAL
+    </a>
 
-    <a href="#custom">CUSTOM JEWELLERY</a>
+    <a href="#custom">
+        CUSTOM JEWELLERY
+    </a>
 
-    <a href="#quality">QUALITY</a>
+    <a href="#quality">
+        QUALITY
+    </a>
 
-    <a href="#contact">CONTACT</a>
+    <a href="#contact">
+        CONTACT
+    </a>
 
 </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
 
 <div class="hero-content">
 
     <div class="hero-small">
-        TANDON JEWELLERS • SINCE 1991
+
+        TANDON JEWELLERS
+        •
+        SINCE 1991
+
     </div>
 
+
     <h1>
+
         Timeless Jewellery,
         Crafted With Trust.
+
     </h1>
 
+
     <p>
-        Discover exquisite Gold, Silver, Diamond,
-        Gemstone and Rudraksha jewellery designed
-        for life's most precious moments.
+
+        Discover exquisite Gold, Silver,
+        Diamond, Gemstone and Rudraksha
+        jewellery designed for life's
+        most precious moments.
+
     </p>
+
 
     <div class="buttons">
 
-        <a href="#categories"
-           class="btn btn-gold">
-           EXPLORE COLLECTION
+        <a
+            href="#categories"
+            class="btn btn-gold">
+
+            EXPLORE COLLECTION
+
         </a>
 
-        <a href="#contact"
-           class="btn btn-outline">
-           VISIT OUR STORE
+
+        <a
+            href="#contact"
+            class="btn btn-outline">
+
+            VISIT OUR STORE
+
         </a>
 
     </div>
@@ -1047,7 +1324,9 @@ footer{
 </section>
 
 
-<!-- CATEGORIES -->
+<!-- =========================
+     CATEGORIES
+========================= -->
 
 <section id="categories">
 
@@ -1055,15 +1334,17 @@ footer{
 
 <div class="section-title">
 
-    <small>DISCOVER</small>
+    <small>
+        DISCOVER
+    </small>
 
     <h2>
         Shop By Category
     </h2>
 
     <p>
-        Explore our carefully selected jewellery
-        collections for every occasion.
+        Explore our jewellery collections
+        for every occasion.
     </p>
 
 </div>
@@ -1074,11 +1355,15 @@ footer{
 
 <div class="category">
 
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80"
+alt="Gold Jewellery">
 
 <div class="category-overlay">
 
-<h3>Gold Jewellery</h3>
+<h3>
+Gold Jewellery
+</h3>
 
 <span>
 Rings • Earrings • Necklaces • Bangles
@@ -1091,11 +1376,15 @@ Rings • Earrings • Necklaces • Bangles
 
 <div class="category">
 
-<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80"
+alt="Silver Jewellery">
 
 <div class="category-overlay">
 
-<h3>Silver Jewellery</h3>
+<h3>
+Silver Jewellery
+</h3>
 
 <span>
 Rings • Anklets • Bracelets • Kids
@@ -1108,11 +1397,15 @@ Rings • Anklets • Bracelets • Kids
 
 <div class="category">
 
-<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+alt="Gemstone Jewellery">
 
 <div class="category-overlay">
 
-<h3>Gemstones</h3>
+<h3>
+Gemstone Jewellery
+</h3>
 
 <span>
 Ruby • Emerald • Sapphire • Pearl
@@ -1125,11 +1418,15 @@ Ruby • Emerald • Sapphire • Pearl
 
 <div class="category">
 
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=900&q=80"
+alt="Rudraksha">
 
 <div class="category-overlay">
 
-<h3>Spiritual</h3>
+<h3>
+Spiritual Collection
+</h3>
 
 <span>
 Rudraksha • Crystals • Evil Eye
@@ -1147,7 +1444,9 @@ Rudraksha • Crystals • Evil Eye
 </section>
 
 
-<!-- GOLD RATE -->
+<!-- =========================
+     GOLD RATE
+========================= -->
 
 <div class="gold-rate">
 
@@ -1155,7 +1454,9 @@ Rudraksha • Crystals • Evil Eye
 
 <div>
 
-<small>TODAY'S GOLD RATE</small>
+<small>
+TODAY'S GOLD RATE
+</small>
 
 <h2>
 22K Gold
@@ -1166,6 +1467,7 @@ Contact us for today's latest gold rate.
 </p>
 
 </div>
+
 
 <a
 href="https://wa.me/919798804937?text=Hello%20Tandon%20Jewellers,%20please%20share%20today's%20gold%20rate."
@@ -1181,7 +1483,9 @@ GET GOLD RATE
 </div>
 
 
-<!-- FEATURED -->
+<!-- =========================
+     FEATURED PRODUCTS
+========================= -->
 
 <section>
 
@@ -1189,7 +1493,9 @@ GET GOLD RATE
 
 <div class="section-title">
 
-<small>OUR COLLECTION</small>
+<small>
+OUR COLLECTION
+</small>
 
 <h2>
 Featured Jewellery
@@ -1210,21 +1516,28 @@ moments and celebrations.
 
 <div class="product-img">
 
-<span class="badge">GOLD</span>
+<span class="badge">
+GOLD
+</span>
 
-<img src="https://images.unsplash.com/photo-1603561596112-db0d7c8c3c9f?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1603561596112-db0d7c8c3c9f?auto=format&fit=crop&w=900&q=80"
+alt="Gold Rings">
 
 </div>
 
 <div class="product-info">
 
-<h3>Gold Rings</h3>
+<h3>
+Gold Rings
+</h3>
 
 <p>
 Plain • Bridal • Engagement • Kundan
 </p>
 
-<button class="enquire"
+<button
+class="enquire"
 onclick="enquire('Gold Rings')">
 
 ENQUIRE ON WHATSAPP
@@ -1240,21 +1553,28 @@ ENQUIRE ON WHATSAPP
 
 <div class="product-img">
 
-<span class="badge">GOLD</span>
+<span class="badge">
+GOLD
+</span>
 
-<img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=900&q=80"
+alt="Gold Earrings">
 
 </div>
 
 <div class="product-info">
 
-<h3>Gold Earrings</h3>
+<h3>
+Gold Earrings
+</h3>
 
 <p>
 Jhumka • Stud • Hoop • Chandbali
 </p>
 
-<button class="enquire"
+<button
+class="enquire"
 onclick="enquire('Gold Earrings')">
 
 ENQUIRE ON WHATSAPP
@@ -1270,21 +1590,28 @@ ENQUIRE ON WHATSAPP
 
 <div class="product-img">
 
-<span class="badge">GEMSTONE</span>
+<span class="badge">
+GEMSTONE
+</span>
 
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+alt="Gemstone Jewellery">
 
 </div>
 
 <div class="product-info">
 
-<h3>Gemstone Jewellery</h3>
+<h3>
+Gemstone Jewellery
+</h3>
 
 <p>
 Ruby • Emerald • Sapphire • Pearl
 </p>
 
-<button class="enquire"
+<button
+class="enquire"
 onclick="enquire('Gemstone Jewellery')">
 
 ENQUIRE ON WHATSAPP
@@ -1300,21 +1627,28 @@ ENQUIRE ON WHATSAPP
 
 <div class="product-img">
 
-<span class="badge">SPIRITUAL</span>
+<span class="badge">
+SPIRITUAL
+</span>
 
-<img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=900&q=80"
+alt="Rudraksha">
 
 </div>
 
 <div class="product-info">
 
-<h3>Rudraksha</h3>
+<h3>
+Rudraksha
+</h3>
 
 <p>
 Rudraksha • Mala • Bracelets
 </p>
 
-<button class="enquire"
+<button
+class="enquire"
 onclick="enquire('Rudraksha Jewellery')">
 
 ENQUIRE ON WHATSAPP
@@ -1333,13 +1667,19 @@ ENQUIRE ON WHATSAPP
 </section>
 
 
-<!-- WEDDING -->
+<!-- =========================
+     WEDDING
+========================= -->
 
-<section class="wedding" id="wedding">
+<section
+class="wedding"
+id="wedding">
 
 <div class="wedding-content">
 
-<small>THE WEDDING COLLECTION</small>
+<small>
+THE WEDDING COLLECTION
+</small>
 
 <h2>
 For Your
@@ -1347,10 +1687,14 @@ Forever Moment
 </h2>
 
 <p>
-Discover beautiful jewellery for weddings,
-engagements and life's most memorable occasions.
-We also create customised wedding and
-engagement sets.
+
+Discover beautiful jewellery for
+weddings, engagements and life's
+most memorable occasions.
+
+We also create customised wedding
+and engagement sets.
+
 </p>
 
 <br>
@@ -1369,7 +1713,9 @@ ENQUIRE FOR WEDDING JEWELLERY
 </section>
 
 
-<!-- GEMSTONES -->
+<!-- =========================
+     GEMSTONES
+========================= -->
 
 <section id="gemstones">
 
@@ -1377,15 +1723,20 @@ ENQUIRE FOR WEDDING JEWELLERY
 
 <div class="section-title">
 
-<small>PRECIOUS & SEMI-PRECIOUS</small>
+<small>
+PRECIOUS & SEMI-PRECIOUS
+</small>
 
 <h2>
 Explore Gemstones
 </h2>
 
 <p>
-Explore our gemstone collection including
-birthstones and jewellery.
+
+Explore our gemstone collection
+including birthstones and
+gemstone jewellery.
+
 </p>
 
 </div>
@@ -1396,54 +1747,78 @@ birthstones and jewellery.
 
 <div class="gemstone">
 
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=500&q=80">
+<img
+src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=85"
+alt="Ruby Gemstone">
 
-<h3>Ruby</h3>
-
-</div>
-
-
-<div class="gemstone">
-
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=500&q=80">
-
-<h3>Emerald</h3>
+<h3>
+Ruby
+</h3>
 
 </div>
 
 
 <div class="gemstone">
 
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=500&q=80">
+<img
+src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=85"
+alt="Emerald Gemstone">
 
-<h3>Sapphire</h3>
-
-</div>
-
-
-<div class="gemstone">
-
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=500&q=80">
-
-<h3>Pearl</h3>
+<h3>
+Emerald
+</h3>
 
 </div>
 
 
 <div class="gemstone">
 
-<img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=500&q=80">
+<img
+src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=600&q=85"
+alt="Sapphire Gemstone">
 
-<h3>Amethyst</h3>
+<h3>
+Sapphire
+</h3>
 
 </div>
 
 
 <div class="gemstone">
 
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=500&q=80">
+<img
+src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=85"
+alt="Pearl">
 
-<h3>Topaz</h3>
+<h3>
+Pearl
+</h3>
+
+</div>
+
+
+<div class="gemstone">
+
+<img
+src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=85"
+alt="Amethyst">
+
+<h3>
+Amethyst
+</h3>
+
+</div>
+
+
+<div class="gemstone">
+
+<img
+src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=85"
+alt="Topaz">
+
+<h3>
+Topaz
+</h3>
 
 </div>
 
@@ -1455,15 +1830,21 @@ birthstones and jewellery.
 </section>
 
 
-<!-- SPIRITUAL -->
+<!-- =========================
+     SPIRITUAL
+========================= -->
 
-<section id="spiritual" class="promise">
+<section
+id="spiritual"
+class="promise">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>SPIRITUAL COLLECTION</small>
+<small>
+SPIRITUAL COLLECTION
+</small>
 
 <h2>
 Rudraksha & Spiritual Products
@@ -1477,13 +1858,19 @@ Rudraksha & Spiritual Products
 
 <div>
 
-<div class="promise-icon">◈</div>
+<div class="promise-icon">
+◈
+</div>
 
-<h3>Rudraksha</h3>
+<h3>
+Rudraksha
+</h3>
 
 <p>
+
 1 Mukhi to 14 Mukhi Rudraksha,
 bracelets and malas.
+
 </p>
 
 </div>
@@ -1491,13 +1878,19 @@ bracelets and malas.
 
 <div>
 
-<div class="promise-icon">✦</div>
+<div class="promise-icon">
+✦
+</div>
 
-<h3>Healing Crystals</h3>
+<h3>
+Healing Crystals
+</h3>
 
 <p>
-Healing crystals and tumbled
-stones.
+
+Healing crystals and
+tumbled stones.
+
 </p>
 
 </div>
@@ -1505,13 +1898,19 @@ stones.
 
 <div>
 
-<div class="promise-icon">◇</div>
+<div class="promise-icon">
+◇
+</div>
 
-<h3>Evil Eye</h3>
+<h3>
+Evil Eye
+</h3>
 
 <p>
+
 Elegant protection-inspired
 products and accessories.
+
 </p>
 
 </div>
@@ -1519,13 +1918,19 @@ products and accessories.
 
 <div>
 
-<div class="promise-icon">✧</div>
+<div class="promise-icon">
+✧
+</div>
 
-<h3>Feng Shui</h3>
+<h3>
+Feng Shui
+</h3>
 
 <p>
-Feng Shui items and pyramid
+
+Feng Shui items and
 energy tools.
+
 </p>
 
 </div>
@@ -1538,7 +1943,9 @@ energy tools.
 </section>
 
 
-<!-- QUALITY -->
+<!-- =========================
+     QUALITY
+========================= -->
 
 <section id="quality">
 
@@ -1546,76 +1953,95 @@ energy tools.
 
 <div class="section-title">
 
-<small>THE TANDON PROMISE</small>
+<small>
+THE TANDON PROMISE
+</small>
 
 <h2>
 Quality You Can Trust
 </h2>
 
 <p>
-Our website currently highlights hallmark,
-certification, gemstone reports and quality
-inspection as part of the Tandon Jewellers
-quality-assurance information.
+
+Hallmark, certification,
+gemstone reports and
+quality inspection.
+
 </p>
 
 </div>
 
 
-<div class="promise-grid">
+<div class="quality-box">
 
 
-<div>
+<div class="quality-card">
 
-<div class="promise-icon">◆</div>
+<div class="promise-icon">
+◆
+</div>
 
-<h3>Gold Hallmark</h3>
+<h3>
+Gold Hallmark
+</h3>
 
 <p>
-Gold hallmark information and
+Gold hallmark and
 purity assurance.
 </p>
 
 </div>
 
 
-<div>
+<div class="quality-card">
 
-<div class="promise-icon">◇</div>
+<div class="promise-icon">
+◇
+</div>
 
-<h3>Gemstone Reports</h3>
+<h3>
+Gemstone Reports
+</h3>
 
 <p>
-Gemstone lab reports and
-authenticity information.
+Gemstone lab reports
+and authenticity information.
 </p>
 
 </div>
 
 
-<div>
+<div class="quality-card">
 
-<div class="promise-icon">✦</div>
+<div class="promise-icon">
+✦
+</div>
 
-<h3>Diamond Certification</h3>
+<h3>
+Diamond Certification
+</h3>
 
 <p>
-IGI/GIA certification information
-for certified diamonds.
+Certified diamond
+documentation.
 </p>
 
 </div>
 
 
-<div>
+<div class="quality-card">
 
-<div class="promise-icon">✓</div>
+<div class="promise-icon">
+✓
+</div>
 
-<h3>Quality Inspection</h3>
+<h3>
+Quality Inspection
+</h3>
 
 <p>
-Detailed inspection, polishing
-and finishing process.
+Inspection, polishing
+and finishing.
 </p>
 
 </div>
@@ -1628,17 +2054,25 @@ and finishing process.
 </section>
 
 
-<!-- CUSTOM -->
+<!-- =========================
+     CUSTOM JEWELLERY
+========================= -->
 
-<section id="custom" style="padding:0">
+<section
+id="custom"
+style="padding:0">
 
 <div class="custom">
 
-<div class="custom-img"></div>
+<div class="custom-img">
+</div>
+
 
 <div class="custom-content">
 
-<small>CUSTOM JEWELLERY</small>
+<small>
+CUSTOM JEWELLERY
+</small>
 
 <h2>
 Your Idea.
@@ -1646,11 +2080,13 @@ Our Craftsmanship.
 </h2>
 
 <p>
+
 Create jewellery that is uniquely yours.
 
-From custom rings and name pendants to
-birthstone bracelets, wedding sets and
-corporate gift designs.
+From custom rings and name pendants
+to birthstone bracelets, wedding sets
+and corporate gift designs.
+
 </p>
 
 <br>
@@ -1671,17 +2107,25 @@ START YOUR DESIGN
 </section>
 
 
-<!-- STORE -->
+<!-- =========================
+     SHOWROOM
+========================= -->
 
-<section id="contact" style="padding:0">
+<section
+id="contact"
+style="padding:0">
 
 <div class="store">
 
-<div class="store-image"></div>
+<div class="store-image">
+</div>
+
 
 <div class="store-content">
 
-<small>VISIT OUR SHOWROOM</small>
+<small>
+VISIT OUR SHOWROOM
+</small>
 
 <h2>
 Experience
@@ -1689,12 +2133,14 @@ Tandon Jewellers
 </h2>
 
 <p>
+
 Visit us for personalised jewellery
 consultation and explore our latest
 collections.
+
 </p>
 
-<div class="store-info">
+<br>
 
 <p>
 📍 Babeja Market, Gudari Bazar,
@@ -1706,14 +2152,18 @@ Samastipur, Bihar
 </p>
 
 <p>
-🕙 10 AM – 9 PM
+☎ +91 6204601253
+</p>
+
+<p>
+🕚 11 AM – 7 PM
 </p>
 
 <p>
 Tuesday Closed
 </p>
 
-</div>
+<br>
 
 <div>
 
@@ -1721,20 +2171,30 @@ Tuesday Closed
 href="tel:+919798804937"
 class="btn btn-gold">
 
-CALL US
+CALL 9798804937
 
 </a>
 
 <a
-href="https://wa.me/919798804937"
-target="_blank"
+href="tel:+916204601253"
 class="btn btn-outline">
 
-WHATSAPP
+CALL 6204601253
 
 </a>
 
 </div>
+
+<br>
+
+<a
+href="https://wa.me/919798804937"
+target="_blank"
+class="btn btn-gold">
+
+WHATSAPP US
+
+</a>
 
 </div>
 
@@ -1743,7 +2203,9 @@ WHATSAPP
 </section>
 
 
-<!-- EDUCATIONAL -->
+<!-- =========================
+     EDUCATIONAL
+========================= -->
 
 <section>
 
@@ -1751,15 +2213,19 @@ WHATSAPP
 
 <div class="section-title">
 
-<small>LEARN WITH TANDON</small>
+<small>
+LEARN WITH TANDON
+</small>
 
 <h2>
 Jewellery Knowledge
 </h2>
 
 <p>
+
 Helpful information about gemstones,
 gold and jewellery selection.
+
 </p>
 
 </div>
@@ -1770,19 +2236,25 @@ gold and jewellery selection.
 
 <div class="blog">
 
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
+alt="Gemstones">
 
 <div class="blog-content">
 
-<small>GEMSTONES</small>
+<small>
+GEMSTONES
+</small>
 
 <h3>
 How to Identify Real Gemstones
 </h3>
 
 <p>
+
 Learn about gemstone authenticity,
 quality and selection.
+
 </p>
 
 </div>
@@ -1792,19 +2264,25 @@ quality and selection.
 
 <div class="blog">
 
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80"
+alt="Gold Jewellery">
 
 <div class="blog-content">
 
-<small>GOLD GUIDE</small>
+<small>
+GOLD GUIDE
+</small>
 
 <h3>
 Understanding Gold Jewellery
 </h3>
 
 <p>
+
 Understand purity, hallmarking and
 important jewellery considerations.
+
 </p>
 
 </div>
@@ -1814,19 +2292,25 @@ important jewellery considerations.
 
 <div class="blog">
 
-<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
+alt="Jewellery">
 
 <div class="blog-content">
 
-<small>JEWELLERY</small>
+<small>
+JEWELLERY
+</small>
 
 <h3>
 Choosing Jewellery for Occasions
 </h3>
 
 <p>
+
 Explore jewellery ideas for weddings,
 festivals and everyday occasions.
+
 </p>
 
 </div>
@@ -1841,7 +2325,9 @@ festivals and everyday occasions.
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -1853,6 +2339,7 @@ Looking For Something Special?
 Talk to Tandon Jewellers about your
 next jewellery purchase.
 </p>
+
 
 <a
 href="https://wa.me/919798804937?text=Hello%20Tandon%20Jewellers,%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery."
@@ -1866,7 +2353,9 @@ CHAT ON WHATSAPP
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1876,15 +2365,22 @@ CHAT ON WHATSAPP
 <div>
 
 <div class="footer-logo">
+
 TANDON
-<span>JEWELLERS</span>
+
+<span>
+JEWELLERS
+</span>
+
 </div>
 
 <p>
+
 Serving Samastipur since 1991.
 
 Gold, Silver, Gemstone, Diamond,
 Rudraksha and Custom Jewellery.
+
 </p>
 
 </div>
@@ -1892,37 +2388,59 @@ Rudraksha and Custom Jewellery.
 
 <div>
 
-<h3>JEWELLERY</h3>
+<h3>
+JEWELLERY
+</h3>
 
-<a href="#categories">Gold Jewellery</a>
+<a href="#categories">
+Gold Jewellery
+</a>
 
-<a href="#categories">Silver Jewellery</a>
+<a href="#categories">
+Silver Jewellery
+</a>
 
-<a href="#gemstones">Gemstone Jewellery</a>
+<a href="#gemstones">
+Gemstone Jewellery
+</a>
 
-<a href="#spiritual">Spiritual Products</a>
-
-</div>
-
-
-<div>
-
-<h3>DISCOVER</h3>
-
-<a href="#wedding">Wedding</a>
-
-<a href="#custom">Custom Jewellery</a>
-
-<a href="#quality">Quality Assurance</a>
-
-<a href="#contact">Contact</a>
+<a href="#spiritual">
+Spiritual Products
+</a>
 
 </div>
 
 
 <div>
 
-<h3>CONTACT</h3>
+<h3>
+DISCOVER
+</h3>
+
+<a href="#wedding">
+Wedding
+</a>
+
+<a href="#custom">
+Custom Jewellery
+</a>
+
+<a href="#quality">
+Quality Assurance
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+CONTACT
+</h3>
 
 <p>
 Babeja Market,
@@ -1935,7 +2453,11 @@ Samastipur, Bihar
 </p>
 
 <p>
-10 AM – 9 PM
++91 6204601253
+</p>
+
+<p>
+11 AM – 7 PM
 <br>
 Tuesday Closed
 </p>
@@ -1948,14 +2470,17 @@ Tuesday Closed
 
 <div class="copyright">
 
-© 2026 Tandon Jewellers — Since 1991
+© 2026 Tandon Jewellers
+— Serving Since 1991
 
 </div>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
 <a
 class="whatsapp"
@@ -1969,7 +2494,9 @@ target="_blank">
 
 <script>
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 function toggleMenu(){
 
@@ -1980,7 +2507,9 @@ function toggleMenu(){
 }
 
 
-/* WHATSAPP ENQUIRY */
+/* =========================
+   WHATSAPP ENQUIRY
+========================= */
 
 function enquire(product){
 
@@ -1999,7 +2528,9 @@ function enquire(product){
 }
 
 
-/* SEARCH */
+/* =========================
+   SEARCH
+========================= */
 
 function searchJewellery(){
 
@@ -2011,7 +2542,9 @@ function searchJewellery(){
 
     if(!value){
 
-        alert("Please enter jewellery name.");
+        alert(
+            "Please enter jewellery name."
+        );
 
         return;
 
@@ -2031,19 +2564,25 @@ function searchJewellery(){
 }
 
 
-/* CLOSE MOBILE MENU */
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
 
 document
 .querySelectorAll("nav a")
 .forEach(function(link){
 
-    link.addEventListener("click",function(){
+    link.addEventListener(
+        "click",
+        function(){
 
-        document
-        .getElementById("nav")
-        .classList.remove("show");
+            document
+            .getElementById("nav")
+            .classList
+            .remove("show");
 
-    });
+        }
+    );
 
 });
 
